@@ -14,16 +14,53 @@ It is your job as a class to implement security for their beach-side
 base of operations. Godspeed.
 */
 
-// I do -> 1. Implement `public` areas. The entire house is open. Not good. Not fun.
-// We do -> 2a. Implement `private` areas with "Conventional Privacy"
-// We do -> 2b. Implement `private` areas with "Closure Privacy"
-// We do -> 2c. Implement `private` with ES6 getters and setters
+// (DONE) I do -> 1. Implement `public` areas. The entire house is open. Not good. Not fun.
+// (DONE) We do -> 2a. Implement `private` areas with "Conventional Privacy"
+// We do -> 2b. Implement `private` with ES6 getters and setters
+// We do -> 2c. Implement `private` areas with "Closure Privacy"
 // We do -> 3. Implement `WeakMap` for `private` and use its get and setters
 // You(Two) do -> 4. Implement `protected` areas using `WeakMap` (this is purposefully challenging)
 
 
-class House
-class Room extends House
+// var egyptianCrib = new House(15, 4);
+class House {
+    constructor (rooms, areas){
+        //we dont want peeps to know how many rooms are in the house...
+        //we want the weapons cache to be private
+
+        //"conventional privacy"
+        this._rooms = rooms;
+        this._areas = areas;
+    }
+
+    //getter
+    getRoomCount(){
+        return this._rooms;
+    }
+
+    //setter
+    setRoomCount(numberOfRooms){
+        this._rooms = numberOfRooms;
+    }
+}
+
+class Room extends House {
+    constructor (){
+        super()
+    }
+
+}
+class Bedroom extends Room {
+    constructor (){
+        super()
+    }
+}
+
+class Area extends House {
+    constructor (){
+        super()
+    }
+}
 
 //privacy is key
 weapons cache
