@@ -20,3 +20,27 @@ base of operations. Godspeed.
 // We do -> 2c. Implement `private` with ES6 getters and setters
 // We do -> 3. Implement `WeakMap` for `private` and use its get and setters
 // You(Two) do -> 4. Implement `protected` areas using `WeakMap` (this is purposefully challenging)
+
+
+class House
+class Room extends House
+
+//privacy is key
+weapons cache
+get -> "get ammo"
+set -> "sentry turret"
+
+bedrooms -> instances of Room
+
+//public area 
+bar -> area
+get -> "dranks"
+set -> "stock the liquor (dranks)"
+
+pool
+set -> water; cleaning
+get -> "healing ointment"
+
+sauna / sunroom -> instance of Room
+
+movie theatre -> instance of Room
