@@ -34,12 +34,12 @@ class House {
     }
 
     //getter
-    getRoomCount(){
+    get RoomCount(){
         return this._rooms;
     }
 
     //setter
-    setRoomCount(numberOfRooms){
+    set RoomCount(numberOfRooms){
         this._rooms = numberOfRooms;
     }
 }
