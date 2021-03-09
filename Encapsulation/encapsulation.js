@@ -16,9 +16,9 @@ base of operations. Godspeed.
 
 // (DONE) I do -> 1. Implement `public` areas. The entire house is open. Not good. Not fun.
 // (DONE) We do -> 2a. Implement `private` areas with "Conventional Privacy"
-// We do -> 2b. Implement `private` with ES6 getters and setters
-// We do -> 2c. Implement `private` areas with "Closure Privacy"
-// We do -> 3. Implement `WeakMap` for `private` and use its get and setters
+// (DONE)We do -> 2b. Implement `private` with ES6 getters and setters
+// You(Two) do -> 2c. Implement `private` areas with "Closure Privacy"
+// You(Two) do -> 3. Implement `WeakMap` for `private` and use its get and setters
 // You(Two) do -> 4. Implement `protected` areas using `WeakMap` (this is purposefully challenging)
 
 
@@ -42,17 +42,29 @@ class House {
     set RoomCount(numberOfRooms){
         this._rooms = numberOfRooms;
     }
+
+    set temperature(temperature){
+
+    }
 }
 
 class Room extends House {
     constructor (){
         super()
-    }
 
+    }
 }
+
 class Bedroom extends Room {
     constructor (){
         super()
+    }
+
+    set lighting(){
+
+    }
+    get sleep(){
+        //+1 energy
     }
 }
 
@@ -60,16 +72,26 @@ class Area extends House {
     constructor (){
         super()
     }
+    set maxCapacity(){
+
+    }
+
+    get squareFootage(){
+
+    }
+
+    get numberOfGuests(){
+
+    }
 }
 
-//privacy is key
+/*privacy is key
 weapons cache
 get -> "get ammo"
 set -> "sentry turret"
 
 bedrooms -> instances of Room
 
-//public area 
 bar -> area
 get -> "dranks"
 set -> "stock the liquor (dranks)"
@@ -81,3 +103,4 @@ get -> "healing ointment"
 sauna / sunroom -> instance of Room
 
 movie theatre -> instance of Room
+*/
