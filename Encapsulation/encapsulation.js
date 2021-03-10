@@ -56,35 +56,83 @@ class Room extends House {
 }
 
 class Bedroom extends Room {
+    static lightingOptions = {
+        ON: 'ON',
+        OFF: 'OFF',
+        DIM: 'DIM',
+    };
+
     constructor (){
         super()
+
+        let lightingLevel = Bedroom.lightingOptions.OFF;
+
+        this._setLighting = function (option) {
+            return lightingLevel = option;
+        };
+
+        this._getLighting = function () {
+            return lightingLevel;
+        };
     }
 
-    set lighting(){
-
+    set lighting(option) {
+        return this._setLighting(option);
     }
+
+    get lighting(){
+        return this._getLighting();
+    }
+
     get sleep(){
         //+1 energy
     }
 }
 
+
 class Area extends House {
     constructor (){
         super()
-    }
-    set maxCapacity(){
 
+        const map = new WeakMap();
+        
+        map.set('maxCapacity', 10);
+        map.set('squareFootage', 100);
+
+        this._getFromMap = key =>
+            map.get(key);
+
+        this._setInMap = (key, value) =>
+            map.get(key, value);
+    }
+
+    get maxCapacity(){
+        return this._getFromMap('maxCapacity');
+    }
+
+    set maxCapacity(capacity){
+        return this._setInMap('maxCapacity', capacity);
     }
 
     get squareFootage(){
-
+        return this._getFromMap('squareFootage');
     }
 
-    get numberOfGuests(){
-
+    set squareFootage(sqFootage){
+        return this._setInMap('squareFootage', sqFootage);
     }
 }
 
+
+class Bar extends Area {}
+
+class WeaponsCache extends Area {}
+
+class Pool extends Area {}
+
+class Sauna extends Area {}
+
+class MovieTheatre extends Area {}
 /*privacy is key
 weapons cache
 get -> "get ammo"
