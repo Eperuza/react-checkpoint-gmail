@@ -103,10 +103,11 @@ class Area extends House {
             map.get(key);
 
         this._setInMap = (key, value) =>
-            map.get(key, value);
+            map.set(key, value);
     }
 
     get maxCapacity(){
+        //`maxCapacity` is `key`
         return this._getFromMap('maxCapacity');
     }
 
