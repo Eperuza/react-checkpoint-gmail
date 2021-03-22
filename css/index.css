@@ -1,0 +1,67 @@
+/*
+    1. Let CSS guide my HTML
+    - think about structure and specificity first. (Jeremy)
+*/
+
+.branches {
+    float: left;
+    clear: left;
+    width: 100% /*relative*/
+}
+
+.branch {
+   /* designate the units */
+   /* px, em, percentage ...*/
+   float: left;
+   clear: right;
+   width: 200px;
+   /*
+   margin-top: 25px;
+   margin-bottom: 25px;
+   margin-right: 25px;
+   margin-left: 25px;
+   */
+   margin: 25px;
+}
+
+.branch h1 {
+
+}
+
+.branch a {
+
+}
+
+.branch img {
+    width: 75px;
+    height: 75px
+}
+
+.branch img.seal {
+    
+}
+
+.branch p.description {
+    
+}
+
+.branch span.establishment {
+
+}
+
+body {
+    text-decoration: underline;
+}
+
+#paragraph {
+    color: pink;
+    font-weight: 100;
+}
+
+#paragraph .paragraph1 { 
+    color: coral;
+}
+
+#paragraph .paragraph2 { 
+    font-style: italic;
+}
