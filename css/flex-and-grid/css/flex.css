@@ -1,0 +1,107 @@
+html {
+    background-color: #DAC024;
+}
+
+.container {
+    max-width: 400px;
+    background-color: blue
+}
+
+.form-row {
+    padding: 10px 0;
+    display: flex;
+}
+
+.form-row label {
+    padding-right: 10px;
+}
+
+.form-row input {
+    flex: 1
+}
+
+/* Layout 2 */
+.flex2 {
+    background-color: yellow;
+}
+
+.column-layout {
+    background-color: olivedrab;
+    margin: 40px auto 0 auto;
+    max-width: 1300px;
+    display: flex;
+}
+
+.main-column {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-1{
+    flex: 1;
+    order: 1
+}
+
+.sidebar-2 {
+    flex: 2;
+    order: 3;
+}
+
+
+/* Layout 3 */
+.flex3 {
+    background-color: purple;
+}
+
+.call-outs-container {
+    max-width: 1300px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.call-out {
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-basis: 28%;
+}
+
+.call-out:nth-child(odd){
+    background-color: red;
+}
+
+.call-out:nth-child(2){
+    background-color: grey;    
+}
+
+.call-out:nth-child(3){
+    background-color: green;
+}
+
+/* .call-out:nth-child(4){
+    background-color: yellow;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
