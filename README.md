@@ -1,2 +1,2 @@
 # sdi-04-demo-es6-code
-Code jeff demo'd for ES6
+Code Jeff Haddock, Gregory Oladipo, and Zach Mansell demo'd for Cohort 2568.
