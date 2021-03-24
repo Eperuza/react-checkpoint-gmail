@@ -40,7 +40,11 @@ class App extends React.Component {
 
   render() {
     return(
-      <Card text="This is a card!" someKey="Another key!" />
+      <div>
+        <Card text="This is a card!" someKey="Another key!" />
+        <br />
+        <Card text="Second Card" />
+      </div>
       // Card({text: "This is a card!", someKey:"Another key!"})
     )
   }
