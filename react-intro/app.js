@@ -34,16 +34,32 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-
+      count: 0
     }
+    // bind, call, apply!
+    this.countIncrementer = this.countIncrementer.bind(this)
+  }
+
+  countIncrementer() {
+    //this.state.count ++;
+    console.log('this =====================================>: ', this)
+    // this global: Window. In an ES6 class, this is set to undefined instead of Window
+    this.setState((previousState) => {
+      return {
+        count: previousState.count + 1
+      }
+    })
   }
 
   render() {
     return(
       <div>
-        <Card text="This is a card!" someKey="Another key!" />
+        <Card text="First Card" someKey="Another key!" />
         <br />
         <Card text="Second Card" />
+        <br />
+        <article>Liked this many times: {this.state.count}</article>
+        <button onClick={this.countIncrementer}>Like me!</button>
       </div>
       // Card({text: "This is a card!", someKey:"Another key!"})
     )
