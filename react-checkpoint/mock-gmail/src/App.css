@@ -1,0 +1,53 @@
+.app-container {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  margin: 15px;
+}
+
+.header{
+  background-color: #9eb7e9;
+  min-height: 100px;
+  max-height: 200px;
+  color: #FFF;
+  grid-column: 1/6;
+  grid-row: 1;
+  font-size: 24pt;
+  padding: 10px 10px 10px 10px;
+}
+
+.navigation{
+  grid-column: 1/2;
+  grid-row: 2/6;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color:lightgray;
+}
+
+.navigation li{
+  list-style-type: none;
+}
+
+.emails{
+  grid-column: 2/6;
+  grid-row: 2/5;
+  background-color: yellow;
+  padding: 10px
+}
+
+.emailEntry{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#emailEntryHeader{
+  font-weight: bold;
+  border-bottom: dotted 1px black;
+}
+
+.emailList li{
+  list-style-type: none;
+}
